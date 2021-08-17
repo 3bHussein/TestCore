@@ -12,13 +12,24 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
+
+//
+using API.Data;
+using Microsoft.EntityFrameworkCore;
 namespace API
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        // old Code
+        // public Startup(IConfiguration configuration)
+        // {
+        //     Configuration = configuration;
+        // } 
+        private readonly IConfiguration _config;
+        public Startup(IConfiguration config)
         {
-            Configuration = configuration;
+            _config = config;
+
         }
 
         public IConfiguration Configuration { get; }
@@ -27,6 +38,10 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddDbContext<DataContext>(options =>
+            {
+                options.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
+            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
