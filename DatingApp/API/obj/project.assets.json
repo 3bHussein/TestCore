@@ -5907,11 +5907,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Programming\\TestCore\\DatingApp\\APi\\API.csproj",
+      "projectUniqueName": "E:\\Programming\\TestCore\\DatingApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "E:\\Programming\\TestCore\\DatingApp\\APi\\API.csproj",
+      "projectPath": "E:\\Programming\\TestCore\\DatingApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\astro\\.nuget\\packages\\",
-      "outputPath": "E:\\Programming\\TestCore\\DatingApp\\APi\\obj\\",
+      "outputPath": "E:\\Programming\\TestCore\\DatingApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5976,7 +5976,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   }
