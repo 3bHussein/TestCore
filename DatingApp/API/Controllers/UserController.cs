@@ -8,7 +8,8 @@ using Microsoft.Extensions.Logging;
 //
 using API.Data;
 using API.Entities;
- 
+using Microsoft.EntityFrameworkCore;
+
 namespace API.Controllers
 {
     [ApiController]
@@ -25,8 +26,8 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<AppUser>>GetUsers(){
-            return _context.Users.ToList();
+        public async Task<ActionResult<IEnumerable<AppUser>>>GetUsers(){
+            return  await  _context.Users.ToListAsync();
 
         }
 
