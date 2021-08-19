@@ -35,11 +35,6 @@ namespace API.Controllers
         public ActionResult<AppUser> GetUsers(int id ){
             return _context.Users.Find(id);
         }
-        [HttpPost]
-        public ActionResult test(){
-            return null;
-
-        }
 
 
 
