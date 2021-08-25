@@ -11,22 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit  {
   // title = 'my-dream-app';
-  title = 'Dating App';
+    title = 'Dating App';
   // create http Request 24/08/2021
-  users:any;
+    users:any;
 
   constructor(private http: HttpClient){}
-  ngOnInit()   {
-    this.getuser()
-   }
+        ngOnInit()   {
+        this.getuser()
+        }
+        //#region  Create GetUser
+        getuser(){
+        this.http.get('https://localhost:5001/users').subscribe(Response =>{
+        this.users =Response;
+        },error=>{
+        console.log(error);
+        })
 
-   getuser(){
-    this.http.get('https://localhost:5001/users').subscribe(Response =>{
-      this.users =Response;
-    },error=>{
-      console.log(error);
-    })
-
-   }
+        }
+        //#endregion
    
 }

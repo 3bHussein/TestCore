@@ -12,42 +12,36 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-
 //
 using API.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
+
 namespace API
 {
     public class Startup
     {
-        // old Code
-        // public Startup(IConfiguration configuration)
-        // {
-        //     Configuration = configuration;
-        // } 
-        private readonly IConfiguration _config;
-        public Startup(IConfiguration config)
+        private readonly IConfiguration _configuration;
+        public Startup(IConfiguration configuration)
         {
-            _config = config;
-
+            _configuration = configuration;
+            // Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        // public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<DataContext>(options =>
-            {
-                options.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
-            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
             });
-            services.AddCors();
+            // services.AddDbContext<StoreContext>(x => x.UseSqlServer("DefaultConnection"));
+            services.AddDbContext<StoreContext>(x => x.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,9 +57,7 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors(policy =>policy.AllowAnyHeader().AllowAnyHeader().WithOrigins("https://localhost:4200"));
 
-            // app.UseCors(p=>p.WithOrigins("https://localhost:4200"));
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
