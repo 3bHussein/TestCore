@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Programming\\TestCore\\DatingApp\\api\\API.csproj": {}
+    "E:\\Programming\\TestCore\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "E:\\Programming\\TestCore\\DatingApp\\api\\API.csproj": {
+    "E:\\Programming\\TestCore\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programming\\TestCore\\DatingApp\\api\\API.csproj",
+        "projectUniqueName": "E:\\Programming\\TestCore\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "E:\\Programming\\TestCore\\DatingApp\\api\\API.csproj",
+        "projectPath": "E:\\Programming\\TestCore\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\astro\\.nuget\\packages\\",
-        "outputPath": "E:\\Programming\\TestCore\\DatingApp\\api\\obj\\",
+        "outputPath": "E:\\Programming\\TestCore\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
