@@ -10,14 +10,14 @@
         "projectUniqueName": "E:\\Programming\\TestCore\\DatingApp\\api\\API.csproj",
         "projectName": "API",
         "projectPath": "E:\\Programming\\TestCore\\DatingApp\\api\\API.csproj",
-        "packagesPath": "C:\\Users\\astro\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\mohamed\\.nuget\\packages\\",
         "outputPath": "E:\\Programming\\TestCore\\DatingApp\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\astro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
